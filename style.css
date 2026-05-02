@@ -2,14 +2,14 @@
     --bg-top: #f8f5ff;
     --bg-bottom: #efe8ff;
 
-    --panel: rgba(255, 255, 255, 0.72);
-    --panel-soft: rgba(255, 255, 255, 0.62);
+    --panel: rgba(255, 255, 255, 0.82);
+    --panel-soft: rgba(255, 255, 255, 0.72);
 
     --line: rgba(130, 120, 170, 0.12);
     --line-strong: rgba(130, 120, 170, 0.2);
 
-    --text: #2f2a40;
-    --muted: #6d6885;
+    --text: #1f1b2e;
+    --muted: #5f5875;
     --muted-soft: #938daa;
 
     --blue: #8b7cf6;
@@ -37,7 +37,7 @@ animation: gradientMove 15s ease infinite;
         radial-gradient(circle at 18% 12%, rgba(122, 146, 255, 0.22), transparent 20%),
         radial-gradient(circle at 80% 78%, rgba(120, 61, 255, 0.18), transparent 24%),
         radial-gradient(circle at 65% 30%, rgba(255, 255, 255, 0.06), transparent 20%),
-        linear-gradient(180deg, var(--bg-top) 0%, #0b0f1f 40%, var(--bg-bottom) 100%);
+        linear-gradient(180deg, var(--bg-top) 0%, #dcd6f7 45%, var(--bg-bottom) 100%);
     overflow-x: hidden;
 }
 
@@ -81,7 +81,7 @@ body::before {
 
 .auth-brand-panel,
 .auth-card {
-    background: linear-gradient(180deg, rgba(31, 35, 58, 0.78) 0%, rgba(21, 24, 42, 0.82) 100%);
+background: rgba(255, 255, 255, 0.72);
     border: 1px solid var(--line);
     border-radius: 28px;
     box-shadow: var(--shadow);
@@ -170,7 +170,7 @@ body::before {
 .auth-divider span {
     position: relative;
     padding: 0 12px;
-    background: #16192b;
+    background: transparent;
     color: var(--muted-soft);
 }
 
@@ -258,7 +258,7 @@ h4 {
 }
 
 .glass-panel {
-    background: linear-gradient(180deg, rgba(31, 35, 58, 0.78) 0%, rgba(21, 24, 42, 0.82) 100%);
+    background: rgba(255, 255, 255, 0.72);
     border: 1px solid var(--line);
     border-radius: 28px;
     box-shadow: var(--shadow);
@@ -910,7 +910,7 @@ h4 {
     border-radius: 18px;
     border: 1px solid var(--line-strong);
     background: rgba(255, 255, 255, 0.04);
-    color: white;
+    color: var(--text);
     padding: 0 18px;
     font: inherit;
 }
