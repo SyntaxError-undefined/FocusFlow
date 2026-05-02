@@ -17,12 +17,17 @@
 * {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     min-height: 100vh;
     font-family: "Avenir Next", "Trebuchet MS", sans-serif;
     color: var(--text);
+    background-size: 400% 400%;
+animation: gradientMove 15s ease infinite;
     background:
         radial-gradient(circle at 18% 12%, rgba(122, 146, 255, 0.22), transparent 20%),
         radial-gradient(circle at 80% 78%, rgba(120, 61, 255, 0.18), transparent 24%),
@@ -254,7 +259,15 @@ h4 {
     box-shadow: var(--shadow);
     backdrop-filter: blur(16px);
 }
+.glass-panel {
+    transition: all 0.3s ease;
+}
 
+.glass-panel:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.15);
+    box-shadow: 0 0 30px rgba(90, 120, 255, 0.12);
+}
 .dashboard-grid {
     display: grid;
     grid-template-columns: 340px minmax(0, 1fr);
@@ -1140,7 +1153,17 @@ h4 {
         text-align: left;
     }
 }
-
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 @media (max-width: 680px) {
     .auth-shell {
         width: min(100% - 18px, 1180px);
