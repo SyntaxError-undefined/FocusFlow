@@ -1023,8 +1023,12 @@ h4 {
     border: 1px solid var(--line);
     background: rgba(255, 255, 255, 0.03);
     cursor: pointer;
+     transition: all 0.3s ease;
 }
-
+.task-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 25px rgba(125, 125, 255, 0.15);
+}
 .task-card.priority {
     border-color: rgba(118, 145, 255, 0.32);
     box-shadow: inset 0 0 0 1px rgba(118, 145, 255, 0.12);
