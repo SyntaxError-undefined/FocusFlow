@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard-shell home-shell">
+        <header class="home-hero">
+            <div>
+                <p class="brand-kicker">Focus AI</p>
+                <h1 id="greetingHeading">Good morning</h1>
+                <p id="todayDateLabel" class="hero-date">Saturday, 2 May. Let's make today count.</p>
+            </div>
+            <div class="topbar-user">
+                <div class="avatar-badge" id="userAvatarBadge">U</div>
+                <div>
+                    <p class="topbar-note">Signed in as</p>
+                    <p id="userDisplayName" class="user-display-name">Loading...</p>
+                </div>
+                <button id="signOutButton" class="ghost-button" type="button">Sign Out</button>
+            </div>
+        </header>
+
+        <section class="home-grid">
+            <section class="glass-panel planning-overview">
+                <div class="home-section-head">
+                    <div>
+                        <p class="panel-kicker">Today's Plan</p>
+                        <h2 id="planSummaryTitle">No plan yet</h2>
+                    </div>
+                </div>
+
+                <p id="planSummaryCopy" class="panel-copy home-copy">
+                    Tell the AI what you want to achieve and it will build your full Pomodoro schedule.
+                </p>
+
+                <div class="mission-composer">
+                    <input
+                        id="objectiveInput"
+                        class="mission-input"
+                        type="text"
+                        placeholder="Type today's goal, project, or outcome..."
+                    >
+                </div>
+
+                <button id="generatePlanButton" class="primary-button cta-button" type="button">
+                    Plan my day with AI
+                </button>
+
+                <p id="statusMessage" class="status-message" aria-live="polite"></p>
+            </section>
+
+            <aside class="glass-panel streak-panel">
+                <p class="panel-kicker">Insights</p>
+                <h2><span id="streakCount">0</span> day streak</h2>
+                <div id="streakBars" class="streak-bars"></div>
+                <p id="streakMessage" class="panel-copy home-copy">Start a focus session to begin your streak.</p>
+                <a id="analyticsLink" class="ghost-button insights-button" href="/analytics.html">View your full analysis</a>
+            </aside>
+        </section>
+
+        <section class="stats-strip">
+            <article class="glass-panel stat-tile">
+                <p class="panel-kicker">Focus Today</p>
+                <strong id="focusTodayValue">0.0h</strong>
+            </article>
+            <article class="glass-panel stat-tile">
+                <p class="panel-kicker">Sessions</p>
+                <strong id="sessionsTodayValue">0</strong>
+            </article>
+            <article class="glass-panel stat-tile">
+                <p class="panel-kicker">Tasks Done</p>
+                <strong id="tasksDoneValue">0 / 0</strong>
+            </article>
+            <article class="glass-panel stat-tile">
+                <p class="panel-kicker">Score</p>
+                <strong id="scoreValue">0</strong>
+            </article>
+        </section>
+
+        <section class="home-lower-grid">
+            <section class="glass-panel pending-panel">
+                <div class="pending-header">
+                    <div>
+                        <p class="panel-kicker">Pending Objectives</p>
+                        <h3>AI ordered task list</h3>
+                    </div>
+                    <span class="ai-badge">AI ordered</span>
+                </div>
+
+                <div id="pendingObjectivesList" class="pending-objectives-list">
+                    <p class="empty-state">Your saved task list will appear here after you generate a plan.</p>
+                </div>
+            </section>
+
+            <aside class="glass-panel next-up-panel">
+                <p class="panel-kicker">Next Up</p>
+                <h3 id="nextUpTitle">Generate your first plan</h3>
+                <p id="nextUpMeta" class="panel-copy home-copy">The top AI-priority task will appear here.</p>
+                <a id="startFocusLink" class="primary-button next-up-button hidden" href="/focus.html">Start focus session</a>
+            </aside>
+        </section>
+
+        <footer class="glass-panel quote-panel">
+            <p id="quoteText" class="quote-text">"The secret of getting ahead is getting started. Break it into small steps."</p>
+            <p class="panel-copy home-copy">Daily motivation for your focus flow.</p>
+        </footer>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>

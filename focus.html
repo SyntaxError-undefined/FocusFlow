@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Focus Session</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard-shell">
+        <header class="topbar">
+            <div>
+                <p class="brand-kicker">Focus AI</p>
+                <h1 id="focusPageTitle">Today's focus dashboard</h1>
+            </div>
+            <div class="topbar-user">
+                <a class="ghost-button" href="/app.html">Back Home</a>
+                <button id="signOutButton" class="ghost-button" type="button">Sign Out</button>
+            </div>
+        </header>
+
+        <section class="dashboard-grid">
+            <aside class="glass-panel timer-panel">
+                <div class="mode-tabs">
+                    <button class="mode-tab active" data-mode="pomodoro" type="button">Pomodoro</button>
+                    <button class="mode-tab" data-mode="shortBreak" type="button">Short Break</button>
+                    <button class="mode-tab" data-mode="longBreak" type="button">Long Break</button>
+                </div>
+
+                <div class="timer-ring">
+                    <div class="timer-ring-inner">
+                        <span id="timerText" class="timer-text">25:00</span>
+                    </div>
+                </div>
+
+                <div class="timer-meta">
+                    <span>Duration</span>
+                    <strong id="timerDurationLabel">25 min</strong>
+                </div>
+
+                <p id="currentTaskHint" class="task-hint">Choose a task to start your focus session.</p>
+
+                <div class="timer-actions">
+                    <button id="startTimerButton" class="primary-button" type="button">Start</button>
+                    <button id="resetTimerButton" class="ghost-button" type="button">Reset</button>
+                </div>
+            </aside>
+
+            <section class="glass-panel analytics-panel">
+                <div class="panel-heading">
+                    <div>
+                        <p class="panel-kicker">Productivity Analytics</p>
+                        <h2 id="planTitle">Today’s focus dashboard</h2>
+                    </div>
+                    <p id="strategyReason" class="panel-copy">
+                        Your AI flow will appear here after you generate a plan.
+                    </p>
+                </div>
+
+                <div class="analytics-grid">
+                    <article class="analytics-card">
+                        <span class="analytics-label">Total Focus</span>
+                        <strong id="totalFocusHours">0.0h</strong>
+                    </article>
+                    <article class="analytics-card">
+                        <span class="analytics-label">Tasks Planned</span>
+                        <strong id="tasksPlanned">0</strong>
+                    </article>
+                    <article class="analytics-card">
+                        <span class="analytics-label">Sessions</span>
+                        <strong id="totalPomodoros">0</strong>
+                    </article>
+                    <article class="analytics-card">
+                        <span class="analytics-label">Break Time</span>
+                        <strong id="estimatedBreakTime">0 min</strong>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <section class="glass-panel mission-panel">
+            <div class="panel-heading mission-heading">
+                <div>
+                    <p class="panel-kicker">Mission Control</p>
+                    <h2>AI generated task stack</h2>
+                </div>
+            </div>
+
+            <section class="plan-progress-panel">
+                <div class="plan-progress-copy">
+                    <span class="panel-kicker">Plan Progress</span>
+                    <strong id="planProgressLabel">0 of 0 tasks complete</strong>
+                </div>
+                <div class="plan-progress-track">
+                    <span id="planProgressFill" class="plan-progress-fill"></span>
+                </div>
+            </section>
+
+            <div id="statusMessage" class="status-message" aria-live="polite"></div>
+
+            <section id="resultsSection" class="results-section">
+                <div class="task-list-header">
+                    <div>
+                        <p class="panel-kicker">Pending Objectives</p>
+                        <h3>Recommended order</h3>
+                    </div>
+                </div>
+                <div id="taskList" class="task-list"></div>
+            </section>
+        </section>
+    </main>
+
+    <script type="module" src="focus.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Analytics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard-shell analytics-shell">
+        <header class="analytics-topbar glass-panel">
+            <a class="ghost-button" href="/app.html">Back Home</a>
+            <div class="analytics-topbar-copy">
+                <p class="brand-kicker">Focus AI</p>
+                <h1>Your analytics</h1>
+            </div>
+            <div class="period-selector" id="periodSelector">
+                <button class="period-button" data-period="today" type="button">Today</button>
+                <button class="period-button active" data-period="week" type="button">Week</button>
+                <button class="period-button" data-period="month" type="button">Month</button>
+            </div>
+        </header>
+
+        <section class="analytics-stat-grid">
+            <article class="glass-panel analytics-stat-card">
+                <p class="panel-kicker">Total Focus</p>
+                <strong id="analyticsTotalFocus">0.0h</strong>
+                <span id="analyticsFocusDelta" class="analytics-delta">No previous data yet</span>
+            </article>
+            <article class="glass-panel analytics-stat-card">
+                <p class="panel-kicker">Sessions</p>
+                <strong id="analyticsSessions">0</strong>
+                <span id="analyticsSessionsDelta" class="analytics-delta">No previous data yet</span>
+            </article>
+            <article class="glass-panel analytics-stat-card">
+                <p class="panel-kicker">Tasks Done</p>
+                <strong id="analyticsTasksDone">0 / 0</strong>
+                <span id="analyticsTasksDelta" class="analytics-delta">Completion rate will show here</span>
+            </article>
+            <article class="glass-panel analytics-stat-card">
+                <p class="panel-kicker">Avg Session</p>
+                <strong id="analyticsAvgSession">0m</strong>
+                <span id="analyticsAvgDelta" class="analytics-delta">No previous data yet</span>
+            </article>
+        </section>
+
+        <section class="analytics-row">
+            <article class="glass-panel analytics-card-large">
+                <p class="panel-kicker">Streak Calendar</p>
+                <div class="analytics-headline-row">
+                    <h2><span id="analyticsStreakCount">0</span> days</h2>
+                    <span id="analyticsBestStreak" class="analytics-support-copy">Best: 0 days</span>
+                </div>
+                <div class="calendar-labels" id="calendarLabels"></div>
+                <div class="analytics-calendar" id="analyticsCalendar"></div>
+                <div class="calendar-legend">
+                    <span><i class="legend-swatch active"></i> Active</span>
+                    <span><i class="legend-swatch muted"></i> Missed</span>
+                    <span><i class="legend-swatch today"></i> Today</span>
+                </div>
+            </article>
+
+            <article class="glass-panel analytics-card-wide">
+                <p class="panel-kicker">Daily Focus Time</p>
+                <p class="analytics-support-copy">Your recent rhythm across the selected period.</p>
+                <div id="focusBars" class="focus-bars"></div>
+            </article>
+        </section>
+
+        <section class="analytics-row">
+            <article class="glass-panel analytics-card-large">
+                <p class="panel-kicker">Productivity Score</p>
+                <div class="analytics-headline-row">
+                    <h2 id="productivityScore">0</h2>
+                    <span id="productivityTier" class="analytics-support-copy">Building momentum</span>
+                </div>
+                <div id="scoreRows" class="score-rows"></div>
+            </article>
+
+            <article class="glass-panel analytics-card-wide">
+                <p class="panel-kicker">Best Focus Hours</p>
+                <p class="analytics-support-copy">Darker cells mean more finished sessions.</p>
+                <div id="heatmapGrid" class="heatmap-grid"></div>
+                <p id="peakHourMessage" class="analytics-support-copy analytics-footnote">Your peak hour will appear here.</p>
+            </article>
+        </section>
+
+        <section class="analytics-row">
+            <article class="glass-panel analytics-card-large">
+                <p class="panel-kicker">Tasks This Period</p>
+                <div id="analyticsTaskRows" class="analytics-task-rows"></div>
+            </article>
+
+            <article class="glass-panel ai-report-card">
+                <div class="ai-report-tag">AI weekly report</div>
+                <p id="aiReportText" class="ai-report-text">Generate and complete a few sessions to unlock a fuller report.</p>
+                <div class="insight-chip-row">
+                    <span class="insight-chip">Peak hour insight</span>
+                    <span class="insight-chip">Completion trend</span>
+                    <span class="insight-chip">Streak coaching</span>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script type="module" src="analytics.js"></script>
+</body>
+</html>

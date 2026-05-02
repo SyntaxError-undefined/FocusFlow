@@ -1,0 +1,9 @@
+{
+  "name": "focusflow-smart-timer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered Pomodoro planner for FocusFlow",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

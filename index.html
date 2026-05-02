@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow | Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+    <main class="auth-shell">
+        <section class="auth-brand-panel">
+            <p class="brand-kicker">Focus AI</p>
+            <h1>Turn daily goals into trackable Pomodoro wins.</h1>
+            <p class="auth-copy">
+                Sign in to save AI-generated plans, track focus sessions, and build a personal productivity history.
+            </p>
+
+            <div class="auth-feature-list">
+                <article class="auth-feature-card">
+                    <span class="auth-feature-title">AI mission planning</span>
+                    <p>Convert one daily objective into a short ordered task list.</p>
+                </article>
+                <article class="auth-feature-card">
+                    <span class="auth-feature-title">Session tracking</span>
+                    <p>Store completed Pomodoros and watch your analytics improve.</p>
+                </article>
+                <article class="auth-feature-card">
+                    <span class="auth-feature-title">Private account data</span>
+                    <p>Each user gets their own plans, tasks, and focus history.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="auth-form-panel">
+            <div class="auth-card">
+                <div class="auth-toggle">
+                    <button id="showSignInButton" class="mode-tab active" type="button">Sign In</button>
+                    <button id="showSignUpButton" class="mode-tab" type="button">Sign Up</button>
+                </div>
+
+                <div class="auth-heading">
+                    <p class="panel-kicker">Welcome Back</p>
+                    <h2 id="authTitle">Access your dashboard</h2>
+                </div>
+
+                <form id="authForm" class="auth-form">
+                    <label class="auth-label" for="nameInput">Full name</label>
+                    <input id="nameInput" class="mission-input hidden" type="text" placeholder="Rohit Kadam">
+
+                    <label class="auth-label" for="emailInput">Email</label>
+                    <input id="emailInput" class="mission-input" type="email" placeholder="you@example.com" required>
+
+                    <label class="auth-label" for="passwordInput">Password</label>
+                    <input id="passwordInput" class="mission-input" type="password" placeholder="Minimum 6 characters" required>
+
+                    <button id="authSubmitButton" class="primary-button auth-submit" type="submit">Sign In</button>
+                </form>
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+                <button id="googleSignInButton" class="ghost-button auth-google-button" type="button">
+                    Continue with Google
+                </button>
+
+                <p id="authStatusMessage" class="status-message" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="auth.js"></script>
+</body>
+</html>
