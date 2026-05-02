@@ -766,6 +766,7 @@ h4 {
     display: grid;
     place-items: center;
     margin-bottom: 20px;
+        animation: pulseGlow 2.5s infinite;
     background:
         radial-gradient(circle at center, rgba(8, 11, 21, 0.94) 58%, transparent 59%),
         conic-gradient(from 0deg, rgba(118, 145, 255, 0.95), rgba(255, 255, 255, 0.08), rgba(118, 145, 255, 0.95));
@@ -825,7 +826,7 @@ h4 {
 .ghost-button {
     padding: 13px 20px;
     cursor: pointer;
-    transition: transform 160ms ease, opacity 160ms ease, border-color 160ms ease;
+    transition: all 0.3s ease;
 }
 
 .primary-button {
@@ -842,7 +843,8 @@ h4 {
 .primary-button:hover:not(:disabled),
 .ghost-button:hover,
 .mode-tab:hover {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(120, 140, 255, 0.35);
 }
 
 .primary-button:disabled {
@@ -1124,7 +1126,25 @@ h4 {
     display: inline;
     margin-bottom: 0;
 }
+@keyframes pulseGlow {
+    0% {
+        box-shadow:
+            0 0 20px rgba(118,145,255,0.2),
+            inset 0 0 20px rgba(255,255,255,0.03);
+    }
 
+    50% {
+        box-shadow:
+            0 0 45px rgba(118,145,255,0.45),
+            inset 0 0 28px rgba(255,255,255,0.06);
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px rgba(118,145,255,0.2),
+            inset 0 0 20px rgba(255,255,255,0.03);
+    }
+}
 @media (max-width: 980px) {
     .home-grid,
     .home-lower-grid,
